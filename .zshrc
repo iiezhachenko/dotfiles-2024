@@ -87,10 +87,27 @@ fi
 alias vim="nvim"
 
 # Enable brew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+architecture=$(uname -m)
+
+# Assign the brew path based on the architecture
+if [ "$architecture" = "x86_64" ]; then
+    # Intel-based Mac
+    brew_path="/usr/local/bin/brew"
+else
+    # Apple Silicon (ARM-based) Mac
+    brew_path="/opt/homebrew/bin/brew"
+fi
+
+# Enable brew
+if [ -x "$brew_path" ]; then
+    eval "$($brew_path shellenv)"
+else
+    echo "Homebrew not found at $brew_path"
+    exit 1
+fi
 
 # Enable vi mode for command line
-set -o vi
+#set -o vi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

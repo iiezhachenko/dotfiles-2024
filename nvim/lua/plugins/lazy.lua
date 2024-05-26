@@ -12,13 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
-  {
-    'maxmx03/solarized.nvim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-    end,
-  },
+  -- Theme
+  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
   -- Telescope
   {

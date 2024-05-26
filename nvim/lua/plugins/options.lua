@@ -1,6 +1,3 @@
-vim.cmd.colorscheme 'solarized'
-vim.o.background = 'light' -- or 'dark'
-
 require("bufferline").setup{} -- bufferline
 
 -- LSP servers setup
