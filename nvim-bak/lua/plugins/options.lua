@@ -21,3 +21,10 @@ require('mason-lspconfig').setup({
   },
   -- End of LSP servers setup
 })
+
+-- Catpuccin Theme Setup
+require("catppuccin").setup({
+  flavour = "macchiato", -- latte, frappe, macchiato, mocha
+})
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"
