@@ -85,6 +85,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
+alias venv="source ./.venv/bin/activate"
 
 # Enable brew
 architecture=$(uname -m)
