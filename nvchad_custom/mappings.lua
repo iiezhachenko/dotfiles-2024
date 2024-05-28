@@ -1,5 +1,11 @@
 local M = {}
 
+M.general = {
+  n = {
+    [";"] = { ":", "Command Mode" },
+  },
+}
+
 M.dap = {
   plugin = true,
   n = {
