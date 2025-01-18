@@ -49,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(autojump git docker)
+plugins=(autojump git docker kubectl-autocomplete)
 
 # User configuration
 
@@ -86,6 +86,11 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias vim="nvim"
 alias venv="source ./.venv/bin/activate"
+
+terraform-docker() {
+  docker run --rm -it -v "$(pwd)":/workspace -v "$HOME/.terraform.d":/root/.terraform.d -w /workspace hashicorp/terraform:latest "$@"
+}
+# alias terraform="docker run --rm -it -v $(pwd):/workspace -v $HOME/.terraform.d:/root/.terraform.d -w /workspace hashicorp/terraform:latest"
 
 # Enable brew
 architecture=$(uname -m)
@@ -125,3 +130,14 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+export LANG="en_US.UTF-8"
+export LC_COLLATE="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+export LC_MESSAGES="en_US.UTF-8"
+export LC_MONETARY="en_US.UTF-8"
+export LC_NUMERIC="en_US.UTF-8"
+export LC_TIME="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform
