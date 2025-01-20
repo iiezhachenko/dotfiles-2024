@@ -54,3 +54,5 @@ vim.opt.updatetime = 50
 -- Set a vertical line at a specified column number
 vim.opt.colorcolumn = "80"
 
+-- Use the + register (system clipboard) automatically whenever you yank text
+vim.opt.clipboard = 'unnamedplus'
