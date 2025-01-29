@@ -56,3 +56,6 @@ vim.opt.colorcolumn = "80"
 
 -- Use the + register (system clipboard) automatically whenever you yank text
 vim.opt.clipboard = 'unnamedplus'
+
+-- The option to make Obsidian notes prettier
+vim.opt.conceallevel = 2
