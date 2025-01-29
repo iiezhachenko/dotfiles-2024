@@ -7,11 +7,11 @@ vim.opt.nu = true
 vim.opt.relativenumber = true
 
 -- A tab character is displayed as four spaces
-vim.opt.tabstop = 4
+vim.opt.tabstop = 2
 -- Pressing Tab inserts four spaces in insert mode
-vim.opt.softtabstop = 4
+vim.opt.softtabstop = 2
 -- Indentation commands shift by four spaces
-vim.opt.shiftwidth = 4
+vim.opt.shiftwidth = 2
 -- Use spaces instead of tabs for indentation
 vim.opt.expandtab = true
 
