@@ -1,7 +1,28 @@
--- Set Leader to Space
 vim.g.mapleader = " "
+-- vim.keymap.set({'i', 'v'}, 'jk', '<ESC>', { noremap = true })
+-- Set Ctrl+s to save
+vim.keymap.set("n", "<C-s>", ":w<CR>", {})
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {
+  desc = "Open built-in file explorer",
+  noremap = true,
+})
 
--- Open built-in file explorer
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-
+-- ToggleTerm Mappings
+vim.keymap.set('n', '<Leader>tf', ':ToggleTerm direction=float<CR>', {
+  desc = "Open floating terminal",
+  noremap = true,
+})
+vim.keymap.set('n', '<Leader>th', ':ToggleTerm direction=horizontal<CR>', {
+  desc = "Open floating terminal",
+  noremap = true,
+})
+vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], {
+  desc = "Exit terminal mode with ESC",
+  noremap = true,
+  silent = true
+})
+vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-W>k]], {
+  desc = "Move out of the terminal",
+  noremap = true,
+})
 
