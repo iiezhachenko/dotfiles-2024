@@ -1,5 +1,5 @@
 -- Disable GUI cursor
-vim.opt.guicursor = ""
+-- vim.opt.guicursor = ""
 
 -- Enable line numbers
 vim.opt.nu = true
