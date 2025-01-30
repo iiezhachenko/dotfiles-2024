@@ -50,8 +50,13 @@ return {
         function()
           require("neotest").output.open({ enter = true })
         end,
-        desc = 'Show test output',
+         desc = 'Show test output',
       },
+      -- Gitsigns Mappings
+      { '<leader>g', group = 'Gitsigns' },
+      { '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>', desc = 'Toggle current line blame' },
+      { '<leader>gp', ':Gitsigns preview_hunk<CR>', desc = 'Preview selected hunk' },
+      { '<leader>gd', ':Gitsigns diffthis<CR>', desc = 'Diff current buffer' },
     })
   end
 }
