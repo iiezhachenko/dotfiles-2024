@@ -16,7 +16,6 @@ return {
       { '<leader>fg', ':Telescope live_grep<CR>', desc = 'Grep files' },
       { '<leader>fs', ':Telescope grep_string<CR>', desc = 'Search for string' },
       { '<leader>fb', ':Telescope buffers<CR>', desc = 'List buffers' },
-
       -- Ufo Key Mappings
       { 'K',
         function()
@@ -27,13 +26,32 @@ return {
         end,
         desc = 'Ufo Peek or LSP Hover',
       },
-
       -- ToggleTerm Mappings
       { '<leader>t', group = 'ToggleTerm' },
       { '<leader>tf', ':ToggleTerm direction=float<CR>', desc = 'Floating terminal' },
       { '<leader>th', ':ToggleTerm direction=horizontal<CR>', desc = 'Horizontal terminal' },
       { '<esc>', [[<C-\><C-n>]], desc = 'Exit terminal mode with ESC', mode = 't' },
-      { '<C-k>', [[<C-\><C-n><C-W>k]], desc = 'Move out of the terminal', mode = 't' }
+      { '<C-k>', [[<C-\><C-n><C-W>k]], desc = 'Move out of the terminal', mode = 't' },
+      -- Neotest Mappings
+      { '<leader>n', group = 'Neotest' },
+      { '<leader>nt',
+        function()
+          require("neotest").run.run()
+        end,
+        desc = 'Run the nearest',
+      },
+      { '<leader>nT',
+        function()
+          require("neotest").run.run(vim.fn.expand("%"))
+        end,
+        desc = 'Run the file',
+      },
+      { '<leader>no',
+        function()
+          require("neotest").output.open({ enter = true })
+        end,
+        desc = 'Show test output',
+      },
     })
   end
 }
