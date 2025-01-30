@@ -7,24 +7,6 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {
   noremap = true,
 })
 
--- ToggleTerm Mappings
-vim.keymap.set('n', '<Leader>tf', ':ToggleTerm direction=float<CR>', {
-  desc = "Open floating terminal",
-  noremap = true,
-})
-vim.keymap.set('n', '<Leader>th', ':ToggleTerm direction=horizontal<CR>', {
-  desc = "Open floating terminal",
-  noremap = true,
-})
-vim.keymap.set('t', '<esc>', [[<C-\><C-n>]], {
-  desc = "Exit terminal mode with ESC",
-  noremap = true,
-  silent = true
-})
-vim.keymap.set('t', '<C-k>', [[<C-\><C-n><C-W>k]], {
-  desc = "Move out of the terminal",
-  noremap = true,
-})
 
 -- Insert mode navigation
 vim.keymap.set('i', '<C-h>', '<Left>')
