@@ -57,6 +57,9 @@ return {
       { '<leader>gb', ':Gitsigns toggle_current_line_blame<CR>', desc = 'Toggle current line blame' },
       { '<leader>gp', ':Gitsigns preview_hunk<CR>', desc = 'Preview selected hunk' },
       { '<leader>gd', ':Gitsigns diffthis<CR>', desc = 'Diff current buffer' },
+      -- Obsidian Mapping
+      { '<leader>o', group = 'Obsidian' },
+      { '<leader>oDl', ":call delete(expand('%')) | bdelete<CR>", desc = 'Delete current file' },
     })
   end
 }

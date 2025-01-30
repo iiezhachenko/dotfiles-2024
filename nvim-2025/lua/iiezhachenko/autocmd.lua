@@ -13,3 +13,10 @@ vim.api.nvim_create_autocmd( { 'BufEnter' }, {
     require('zen-mode').open()
   end
 })
+vim.api.nvim_create_autocmd( { 'BufUnload' }, {
+  group = 'zen_mode',
+  pattern = {'*.md'},
+  callback = function ()
+    require('zen-mode').close()
+  end
+})
