@@ -39,7 +39,7 @@ vim.opt.incsearch = true
 vim.opt.termguicolors = true
 
 -- How many lines to keep above and below the cursor when scrolling
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 15
 -- Display the sign column
 vim.opt.signcolumn = "yes"
 -- Allow for additional characters (specifically @ and -) in file names
