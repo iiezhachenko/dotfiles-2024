@@ -30,7 +30,7 @@ return {
       { '<leader>t', group = 'ToggleTerm' },
       { '<leader>tf', ':ToggleTerm direction=float<CR>', desc = 'Floating terminal' },
       { '<leader>th', ':ToggleTerm direction=horizontal<CR>', desc = 'Horizontal terminal' },
-      { '<esc>', [[<C-\><C-n>]], desc = 'Exit terminal mode with ESC', mode = 't' },
+      { '<C-x>', [[<C-\><C-n>]], desc = 'Exit terminal mode', mode = 't' },
       { '<C-k>', [[<C-\><C-n><C-W>k]], desc = 'Move out of the terminal', mode = 't' },
       -- Neotest Mappings
       { '<leader>n', group = 'Neotest' },
