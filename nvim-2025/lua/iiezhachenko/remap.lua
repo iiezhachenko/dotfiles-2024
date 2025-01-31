@@ -1,7 +1,8 @@
 vim.g.mapleader = " "
 -- vim.keymap.set({'i', 'v'}, 'jk', '<ESC>', { noremap = true })
 -- Set Ctrl+s to save
-vim.keymap.set("n", "<C-s>", ":w<CR>", {})
+vim.keymap.set( "n","<C-s>", ":w<CR>", {})
+vim.keymap.set( "i","<C-s>", "<ESC>:w<CR>", {})
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, {
   desc = "Open built-in file explorer",
   noremap = true,
