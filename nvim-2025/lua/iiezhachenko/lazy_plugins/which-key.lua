@@ -14,8 +14,15 @@ return {
       { '<leader>f', group = 'Telescope' },
       { '<leader>ff', ':Telescope find_files<CR>', desc = 'Find files' },
       { '<leader>fg', ':Telescope live_grep<CR>', desc = 'Grep files' },
-      { '<leader>fs', ':Telescope grep_string<CR>', desc = 'Search for string' },
+      { '<leader>fR', ':Telescope grep_string<CR>', desc = 'Search for string' },
       { '<leader>fb', ':Telescope buffers<CR>', desc = 'List buffers' },
+      { '<leader>fd', ':Telescope lsp_definitions<CR>', desc = 'Definition' },
+      { '<leader>fD', ':Telescope lsp_type_definitions<CR>', desc = 'Type definition' },
+      { '<leader>fr', ':Telescope lsp_references<CR>', desc = 'References' },
+      { '<leader>fc', ':Telescope lsp_incoming_calls<CR>', desc = 'Incoming calls' },
+      { '<leader>fC', ':Telescope lsp_outgoing_calls<CR>', desc = 'Outgoing calls' },
+      { '<leader>fs', ':Telescope lsp_document_symbols<CR>', desc = 'Document Symbols' },
+      { '<leader>fS', ':Telescope lsp_workspace_symbols<CR>', desc = 'Workspace Symbols' },
       -- Ufo Key Mappings
       { 'K',
         function()
