@@ -67,6 +67,9 @@ return {
       -- Obsidian Mapping
       { '<leader>o', group = 'Obsidian' },
       { '<leader>oDl', ":call delete(expand('%')) | bdelete<CR>", desc = 'Delete current file' },
+      -- LSP Mappings
+      { '<leader>l', group = 'LSP' },
+      { '<leader>lk', ':lua vim.diagnostic.open_float()<CR>', desc = 'Line diagnostics floating window' },
     })
   end
 }
